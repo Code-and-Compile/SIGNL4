@@ -1,1 +1,777 @@
-[]
+[
+    {
+        "id": "773a02b07ef174d6",
+        "type": "tab",
+        "label": "Siemens PLC Data",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "74fa2b1bea8d61a5",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "63db0b02a6a6bfc3",
+        "type": "s7comm",
+        "ip": "192.168.0.146",
+        "port": "102",
+        "rack": "0",
+        "slot": "1",
+        "payload": [
+            {
+                "S7_Type": "DB",
+                "S7_DBnum": "2",
+                "S7_Datatype": "R",
+                "S7_Offset": "4",
+                "S7_BitOffset": "0",
+                "S7_Quantity": "1",
+                "S7_Name": "Level"
+            },
+            {
+                "S7_Type": "DB",
+                "S7_DBnum": "2",
+                "S7_Datatype": "R",
+                "S7_Offset": "8",
+                "S7_BitOffset": "0",
+                "S7_Quantity": "1",
+                "S7_Name": "FIlling"
+            },
+            {
+                "S7_Type": "DB",
+                "S7_DBnum": "2",
+                "S7_Datatype": "R",
+                "S7_Offset": "12",
+                "S7_BitOffset": "0",
+                "S7_Quantity": "1",
+                "S7_Name": "Draining"
+            },
+            {
+                "S7_Type": "Q",
+                "S7_DBnum": "0",
+                "S7_Datatype": "X",
+                "S7_Offset": "0",
+                "S7_BitOffset": "5",
+                "S7_Quantity": "1",
+                "S7_Name": "Mixer"
+            },
+            {
+                "S7_Type": "DB",
+                "S7_DBnum": "2",
+                "S7_Datatype": "B",
+                "S7_Offset": "18",
+                "S7_BitOffset": "0",
+                "S7_Quantity": "1",
+                "S7_Name": "Status"
+            }
+        ]
+    },
+    {
+        "id": "9ff0b9da0c4bdaaa",
+        "type": "ui_tab",
+        "name": "Factory Data",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9be1878a2a35a824",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "8f97312a446bc647",
+        "type": "ui_group",
+        "name": "Tank Level and Mixing System",
+        "tab": "9ff0b9da0c4bdaaa",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0df4552f9d69039d",
+        "type": "ui_group",
+        "name": "DEFAULT",
+        "tab": "f3a8a67ff0904e39",
+        "order": 1,
+        "disp": false,
+        "width": "44",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f3a8a67ff0904e39",
+        "type": "ui_tab",
+        "name": "HOME",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c4eceb68368bc0a1",
+        "type": "s7comm read",
+        "z": "773a02b07ef174d6",
+        "connection": "63db0b02a6a6bfc3",
+        "payload": "{\"S7_Type\":\"DB\",\"S7_DBnum\":\"2\",\"S7_Datatype\":\"R\",\"S7_Offset\":\"4\",\"S7_BitOffset\":\"0\",\"S7_Quantity\":\"1\",\"S7_Name\":\"Level\"}",
+        "s7Name": "Level",
+        "topic": "",
+        "name": "Level",
+        "signalSetted": false,
+        "none": "true",
+        "repeat": "",
+        "once": false,
+        "x": 330,
+        "y": 60,
+        "wires": [
+            [
+                "8345b0f8b3af1477"
+            ]
+        ]
+    },
+    {
+        "id": "2d9f61c8066e317d",
+        "type": "inject",
+        "z": "773a02b07ef174d6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 60,
+        "wires": [
+            [
+                "c4eceb68368bc0a1",
+                "63a1e458b30c9086",
+                "cd67b6ed6365f843",
+                "cbec99300edc41aa",
+                "1d9704803507554e"
+            ]
+        ]
+    },
+    {
+        "id": "63a1e458b30c9086",
+        "type": "s7comm read",
+        "z": "773a02b07ef174d6",
+        "connection": "63db0b02a6a6bfc3",
+        "payload": "{\"S7_Type\":\"DB\",\"S7_DBnum\":\"2\",\"S7_Datatype\":\"R\",\"S7_Offset\":\"8\",\"S7_BitOffset\":\"0\",\"S7_Quantity\":\"1\",\"S7_Name\":\"FIlling\"}",
+        "s7Name": "FIlling",
+        "topic": "",
+        "name": "Filling",
+        "signalSetted": false,
+        "none": "true",
+        "repeat": "",
+        "once": false,
+        "x": 330,
+        "y": 120,
+        "wires": [
+            [
+                "ea4e25591826e701"
+            ]
+        ]
+    },
+    {
+        "id": "cd67b6ed6365f843",
+        "type": "s7comm read",
+        "z": "773a02b07ef174d6",
+        "connection": "63db0b02a6a6bfc3",
+        "payload": "{\"S7_Type\":\"DB\",\"S7_DBnum\":\"2\",\"S7_Datatype\":\"R\",\"S7_Offset\":\"12\",\"S7_BitOffset\":\"0\",\"S7_Quantity\":\"1\",\"S7_Name\":\"Draining\"}",
+        "s7Name": "Draining",
+        "topic": "",
+        "name": "Draining",
+        "signalSetted": false,
+        "none": "true",
+        "repeat": "",
+        "once": false,
+        "x": 340,
+        "y": 180,
+        "wires": [
+            [
+                "c6211d3d09d4abbf"
+            ]
+        ]
+    },
+    {
+        "id": "cbec99300edc41aa",
+        "type": "s7comm read",
+        "z": "773a02b07ef174d6",
+        "connection": "63db0b02a6a6bfc3",
+        "payload": "{\"S7_Type\":\"Q\",\"S7_DBnum\":\"0\",\"S7_Datatype\":\"X\",\"S7_Offset\":\"0\",\"S7_BitOffset\":\"5\",\"S7_Quantity\":\"1\",\"S7_Name\":\"Mixer\"}",
+        "s7Name": "Mixer",
+        "topic": "",
+        "name": "Mixer",
+        "signalSetted": false,
+        "none": "true",
+        "repeat": "",
+        "once": false,
+        "x": 330,
+        "y": 240,
+        "wires": [
+            [
+                "7d7dc9bb0dd0d932"
+            ]
+        ]
+    },
+    {
+        "id": "36a74dbb89524cbe",
+        "type": "ui_artlessgauge",
+        "z": "773a02b07ef174d6",
+        "group": "8f97312a446bc647",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "name": "FIlling Valve %",
+        "icon": "",
+        "label": "FIlling Valve %",
+        "unit": "%",
+        "layout": "linear",
+        "decimals": 0,
+        "differential": false,
+        "minmax": false,
+        "colorTrack": "#555555",
+        "style": "",
+        "colorFromTheme": true,
+        "property": "payload",
+        "secondary": "secondary",
+        "inline": false,
+        "animate": true,
+        "sectors": [
+            {
+                "val": 0,
+                "col": "#ff8b1f",
+                "t": "min",
+                "dot": 0
+            },
+            {
+                "val": 100,
+                "col": "#ff8b1f",
+                "t": "max",
+                "dot": 0
+            }
+        ],
+        "lineWidth": 3,
+        "bgcolorFromTheme": true,
+        "diffCenter": "",
+        "x": 680,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "324f2d2d9434dc75",
+        "type": "ui_artlessgauge",
+        "z": "773a02b07ef174d6",
+        "group": "8f97312a446bc647",
+        "order": 4,
+        "width": "0",
+        "height": "0",
+        "name": "Draining Valve %",
+        "icon": "",
+        "label": "Draining Valve %",
+        "unit": "%",
+        "layout": "linear",
+        "decimals": 0,
+        "differential": false,
+        "minmax": false,
+        "colorTrack": "#555555",
+        "style": "",
+        "colorFromTheme": true,
+        "property": "payload",
+        "secondary": "secondary",
+        "inline": false,
+        "animate": true,
+        "sectors": [
+            {
+                "val": 0,
+                "col": "#a8f7a6",
+                "t": "min",
+                "dot": 0
+            },
+            {
+                "val": 100,
+                "col": "#a8f7a6",
+                "t": "max",
+                "dot": 0
+            }
+        ],
+        "lineWidth": 3,
+        "bgcolorFromTheme": true,
+        "diffCenter": "",
+        "x": 690,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "478ee26ae1d7f396",
+        "type": "ui_led",
+        "z": "773a02b07ef174d6",
+        "order": 2,
+        "group": "8f97312a446bc647",
+        "width": 0,
+        "height": 0,
+        "label": "Mixer Status",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#cecaca",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#0aff0a",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "Mixer Status",
+        "x": 670,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "4c9a0763ba39ddc7",
+        "type": "ui_gauge",
+        "z": "773a02b07ef174d6",
+        "name": "",
+        "group": "8f97312a446bc647",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "gtype": "wave",
+        "title": "Tank Level",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 670,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "7b25ce6dd14bda15",
+        "type": "ui_text",
+        "z": "773a02b07ef174d6",
+        "group": "8f97312a446bc647",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "System Status",
+        "format": "<font face='arial'><font size=3><font color={{fcolor}}>{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 680,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "8345b0f8b3af1477",
+        "type": "function",
+        "z": "773a02b07ef174d6",
+        "name": "function 3",
+        "func": "msg.payload = Number(msg.payload.value[0].toFixed(2));\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 60,
+        "wires": [
+            [
+                "4c9a0763ba39ddc7"
+            ]
+        ]
+    },
+    {
+        "id": "ea4e25591826e701",
+        "type": "function",
+        "z": "773a02b07ef174d6",
+        "name": "function 4",
+        "func": "msg.payload = Number(msg.payload.value[0].toFixed(2));\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 120,
+        "wires": [
+            [
+                "36a74dbb89524cbe"
+            ]
+        ]
+    },
+    {
+        "id": "c6211d3d09d4abbf",
+        "type": "function",
+        "z": "773a02b07ef174d6",
+        "name": "function 5",
+        "func": "msg.payload = Number(msg.payload.value[0].toFixed(2));\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 180,
+        "wires": [
+            [
+                "324f2d2d9434dc75"
+            ]
+        ]
+    },
+    {
+        "id": "7d7dc9bb0dd0d932",
+        "type": "function",
+        "z": "773a02b07ef174d6",
+        "name": "function 6",
+        "func": "msg.payload = msg.payload.value[0];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 240,
+        "wires": [
+            [
+                "478ee26ae1d7f396"
+            ]
+        ]
+    },
+    {
+        "id": "1d9704803507554e",
+        "type": "s7comm read",
+        "z": "773a02b07ef174d6",
+        "connection": "63db0b02a6a6bfc3",
+        "payload": "{\"S7_Type\":\"DB\",\"S7_DBnum\":\"2\",\"S7_Datatype\":\"B\",\"S7_Offset\":\"18\",\"S7_BitOffset\":\"0\",\"S7_Quantity\":\"1\",\"S7_Name\":\"Status\"}",
+        "s7Name": "Status",
+        "topic": "",
+        "name": "Status",
+        "signalSetted": false,
+        "none": "true",
+        "repeat": "",
+        "once": false,
+        "x": 330,
+        "y": 300,
+        "wires": [
+            [
+                "1ab7cfc5f6cc3ae7"
+            ]
+        ]
+    },
+    {
+        "id": "518c66fde7540926",
+        "type": "SIGNL4",
+        "z": "773a02b07ef174d6",
+        "name": "SIGNL4 Alerting",
+        "teamSecret": "xevhetrsv3",
+        "alertSubject": "",
+        "alertBody": "",
+        "alertS4Service": "",
+        "alertS4Location": "",
+        "alertS4AlertingScenario": "single_ack",
+        "alertS4Filtering": "false",
+        "alertS4ExternalID": "",
+        "x": 1200,
+        "y": 340,
+        "wires": [
+            [
+                "a9839d5a2e2c2c87"
+            ]
+        ]
+    },
+    {
+        "id": "592a1e53be0f403d",
+        "type": "SIGNL4 Resolve",
+        "z": "773a02b07ef174d6",
+        "name": "SIGNL4 Resolve",
+        "teamSecret": "xevhetrsv3",
+        "alertS4ExternalID": "",
+        "x": 1210,
+        "y": 380,
+        "wires": [
+            [
+                "a9839d5a2e2c2c87"
+            ]
+        ]
+    },
+    {
+        "id": "ea9c93a7bcce0217",
+        "type": "function",
+        "z": "773a02b07ef174d6",
+        "name": "function 1",
+        "func": "var msg1 = {};\nvar msg2 = {};\n\n//Warning\nif (msg.status == 1)\n{\n    msg1.payload = {\n        \"Subject\": \"Factory Alert\",\n        \"Body\": msg.payload,\n        \"X-S4-Service\": \"Machinery\",\n        \"X-S4-Location\": \"47.7667264,9.158432\",\n        \"X-S4-AlertingScenario\": \"single_ack\",\n        \"X-S4-Filtering\": false,\n        \"X-S4-ExternalID\": \"AB12\"\n    }\n    return [msg1,null];\n}\n\n//Fault or Wrror\nif (msg.status >= 2) {\n    msg1.payload = {\n        \"Subject\": \"Factory Alert\",\n        \"Body\": msg.payload,\n        \"X-S4-Service\": \"Emergency\",\n        \"X-S4-Location\": \"47.7667264,9.158432\",\n        \"X-S4-AlertingScenario\": \"single_ack\",\n        \"X-S4-Filtering\": false,\n        \"X-S4-ExternalID\": \"AB12\"\n    }\n    return [msg1, null];\n}\n\n//Resolve\n//Fault or Wrror\nif (msg.status == 0) \n{\n    msg2.payload = {\n        \"X-S4-ExternalID\": \"AB12\"\n    }\n    return [null, msg2];\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 980,
+        "y": 340,
+        "wires": [
+            [
+                "518c66fde7540926"
+            ],
+            [
+                "592a1e53be0f403d"
+            ]
+        ]
+    },
+    {
+        "id": "a9839d5a2e2c2c87",
+        "type": "debug",
+        "z": "773a02b07ef174d6",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1420,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "1ab7cfc5f6cc3ae7",
+        "type": "function",
+        "z": "773a02b07ef174d6",
+        "name": "function 9",
+        "func": "var status = msg.payload.value[0];\n\nif (status == 0)\n{\n    msg.payload = \"Level is OK\";\n    msg.fcolor = \"lime\";\n    msg.status = status;\n    return msg;\n}\n\nif (status == 1) {\n    msg.payload = \"Warning! Low Level\";\n    msg.fcolor = \"orange\";\n    msg.status = status;\n    return msg;\n}\n\nif (status >= 2) {\n    msg.payload = \"Fault! Critically Low Level!\";\n    msg.fcolor = \"red\";\n    msg.status = status;\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 300,
+        "wires": [
+            [
+                "7b25ce6dd14bda15",
+                "b2635e4e8e22ae15"
+            ]
+        ]
+    },
+    {
+        "id": "b2635e4e8e22ae15",
+        "type": "rbe",
+        "z": "773a02b07ef174d6",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 650,
+        "y": 340,
+        "wires": [
+            [
+                "7c024e977c7129cb"
+            ]
+        ]
+    },
+    {
+        "id": "7c024e977c7129cb",
+        "type": "gate",
+        "z": "773a02b07ef174d6",
+        "name": "",
+        "controlTopic": "control",
+        "defaultState": "closed",
+        "openCmd": "open",
+        "closeCmd": "close",
+        "toggleCmd": "toggle",
+        "defaultCmd": "default",
+        "statusCmd": "status",
+        "persist": false,
+        "storeName": "memory",
+        "x": 810,
+        "y": 340,
+        "wires": [
+            [
+                "ea9c93a7bcce0217"
+            ]
+        ]
+    },
+    {
+        "id": "613615b3bd7c9ec5",
+        "type": "ui_switch",
+        "z": "773a02b07ef174d6",
+        "name": "",
+        "label": "Connect to SIGNL4",
+        "tooltip": "",
+        "group": "8f97312a446bc647",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "control",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "open",
+        "onvalueType": "str",
+        "onicon": "add_alert",
+        "oncolor": "lime",
+        "offvalue": "close",
+        "offvalueType": "str",
+        "officon": "add_alert",
+        "offcolor": "red",
+        "animate": true,
+        "className": "",
+        "x": 430,
+        "y": 400,
+        "wires": [
+            [
+                "66c5e8462df54460"
+            ]
+        ]
+    },
+    {
+        "id": "66c5e8462df54460",
+        "type": "function",
+        "z": "773a02b07ef174d6",
+        "name": "function 10",
+        "func": "msg.control = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 650,
+        "y": 400,
+        "wires": [
+            [
+                "7c024e977c7129cb"
+            ]
+        ]
+    }
+]
