@@ -3,15 +3,7 @@
         "id": "773a02b07ef174d6",
         "type": "tab",
         "label": "Siemens PLC Data",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "74fa2b1bea8d61a5",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -225,39 +217,6 @@
         "wires": [
             [
                 "8345b0f8b3af1477"
-            ]
-        ]
-    },
-    {
-        "id": "2d9f61c8066e317d",
-        "type": "inject",
-        "z": "773a02b07ef174d6",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "2",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 110,
-        "y": 60,
-        "wires": [
-            [
-                "c4eceb68368bc0a1",
-                "63a1e458b30c9086",
-                "cd67b6ed6365f843",
-                "cbec99300edc41aa",
-                "1d9704803507554e"
             ]
         ]
     },
@@ -773,5 +732,227 @@
                 "7c024e977c7129cb"
             ]
         ]
+    },
+    {
+        "id": "130df3e2e6e1f1cd",
+        "type": "http request",
+        "z": "773a02b07ef174d6",
+        "name": "",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://connect.signl4.com/webhook/y35i6zfjbo",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "basic",
+        "senderr": false,
+        "headers": [],
+        "x": 690,
+        "y": 620,
+        "wires": [
+            [
+                "d48af53c21b870f9"
+            ]
+        ]
+    },
+    {
+        "id": "bfa2506badf074a1",
+        "type": "comment",
+        "z": "773a02b07ef174d6",
+        "name": "Webhook url",
+        "info": "https://connect.signl4.com/webhook/xevhetrsv3",
+        "x": 250,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "08ce351ea46a96a4",
+        "type": "inject",
+        "z": "773a02b07ef174d6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 620,
+        "wires": [
+            [
+                "a5345fd1554e48c5"
+            ]
+        ]
+    },
+    {
+        "id": "d48af53c21b870f9",
+        "type": "debug",
+        "z": "773a02b07ef174d6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "a5345fd1554e48c5",
+        "type": "function",
+        "z": "773a02b07ef174d6",
+        "name": "",
+        "func": "msg.payload = {\n    \"Title\": \"Critical problem\",\n    \"Message\": \"Database system XA4 reported error 49918.\",\n    \"Severity\": \"16\",\n    \"X-S4-Service\": \"Database\",\n    \"X-S4-ExternalID\": \"AB12\"\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 620,
+        "wires": [
+            [
+                "130df3e2e6e1f1cd"
+            ]
+        ]
+    },
+    {
+        "id": "8fe740a803f348f6",
+        "type": "http request",
+        "z": "773a02b07ef174d6",
+        "name": "",
+        "method": "PUT",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://typedwebhook.tools/webhook/bea778ee-7de7-4c47-9d8b-5700c2055fef",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 550,
+        "y": 680,
+        "wires": [
+            [
+                "d48af53c21b870f9"
+            ]
+        ]
+    },
+    {
+        "id": "a75d35e6600c47bb",
+        "type": "inject",
+        "z": "773a02b07ef174d6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 680,
+        "wires": [
+            [
+                "8fe740a803f348f6"
+            ]
+        ]
+    },
+    {
+        "id": "f24e00c8684151f2",
+        "type": "comment",
+        "z": "773a02b07ef174d6",
+        "name": "API Key",
+        "info": "3ed70c656522cdfaa8a2c609444c20f5913ee5a47fb353fc7995c623b51c4037",
+        "x": 240,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "5d5b29166417722b",
+        "type": "comment",
+        "z": "773a02b07ef174d6",
+        "name": "",
+        "info": "{\n\"id\": \"1234\",\n\"Title\": \"Maintenance mode\",\n\"Type\": \"Machinery\",\n\"Message\": \"The system is triggered into Maintenance mode!\",\n\"State\": \"ACTIVE\"\n}",
+        "x": 220,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "a45309abda44fe27",
+        "type": "http in",
+        "z": "773a02b07ef174d6",
+        "name": "",
+        "url": "https://typedwebhook.tools/webhook/bea778ee-7de7-4c47-9d8b-5700c2055fef",
+        "method": "get",
+        "upload": true,
+        "swaggerDoc": "",
+        "x": 470,
+        "y": 720,
+        "wires": [
+            [
+                "d48af53c21b870f9"
+            ]
+        ]
+    },
+    {
+        "id": "d30a5f07115e221a",
+        "type": "http in",
+        "z": "773a02b07ef174d6",
+        "name": "",
+        "url": "/alerts",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 560,
+        "y": 780,
+        "wires": [
+            [
+                "08a7bdd04eba315f"
+            ]
+        ]
+    },
+    {
+        "id": "08a7bdd04eba315f",
+        "type": "debug",
+        "z": "773a02b07ef174d6",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 780,
+        "wires": []
     }
 ]
