@@ -13,4 +13,4 @@ Important links:
 
 Cheers,
 Rajvir Singh
-Founder, Code and Compile
+Founder of Code and Compile
